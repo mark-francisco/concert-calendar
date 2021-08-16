@@ -1,8 +1,20 @@
+import { Route, Switch } from "react-router-dom";
+import AllConcertsPage from "./pages/AllConcerts";
+import FavoritesPage from "./pages/Favorites";
+import Layout from "./components/layout/Layout";
+
 function App() {
   return (
-    <div>
-      <h1>Concert Calendar</h1>
-    </div>
+    <Layout>
+      <Switch>
+        <Route path="/" exact={true}>
+          <AllConcertsPage />
+        </Route>
+        <Route path="/favorites">
+          <FavoritesPage />
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
 
