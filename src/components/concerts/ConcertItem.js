@@ -1,24 +1,22 @@
 function ConcertItem(props) {
   return (
     <li>
-      {/* 
-          // url={concert.url}
-          // date={concert.date}
-          // time={concert.time}
-          // type={concert.type}
-          // city={concert.city}
-          // address={concert.address}
-          // genre={concert.genre}
-          // subgenre={concert.subgenre}
-          // venue={concert.venue}
-          // market={concert.market} */}
       <div>
-        <p>{props.concert.id}</p>
-        <h3>{props.concert.name}</h3>
-        <address>{props.address}</address>
-        <p>{props.description}</p>
+        <p>ID: {props.concert.id}</p>
+        <h3>Name: {props.concert.name}</h3>
+        <p>URL: {props.concert.url}</p>
+        <p>Date: {props.concert.date}</p>
+        <p>Time: {props.concert.time}</p>
+        <p>Type: {props.concert.type}</p>
+        <p>City: {props.concert.city}</p>
+        <p>Address: {props.concert.address}</p>
+        <p>Genre: {props.concert.genre}</p>
+        <p>Subgenre: {props.concert.subgenre}</p>
+        <p>Venue: {props.concert.venue}</p>
+        <p>Market: {props.concert.market}</p>
       </div>
       <div>
+        <button>More Info</button>
         <button>Add to Favorites</button>
       </div>
     </li>
