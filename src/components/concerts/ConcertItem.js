@@ -12,17 +12,17 @@ function ConcertItem(props) {
     } else {
       favoritesCtx.addFavorite({
         id: props.concert.id,
-        id: props.concert.id,
-        id: props.concert.id,
-        id: props.concert.id,
-        id: props.concert.id,
-        id: props.concert.id,
-        id: props.concert.id,
-        id: props.concert.id,
-        id: props.concert.id,
-        id: props.concert.id,
-        id: props.concert.id,
-        id: props.concert.id,
+        name: props.concert.name,
+        url: props.concert.url,
+        date: props.concert.date,
+        time: props.concert.time,
+        type: props.concert.type,
+        city: props.concert.city,
+        address: props.concert.address,
+        genre: props.concert.genre,
+        subgenre: props.concert.subgenre,
+        venue: props.concert.venue,
+        market: props.concert.market,
       });
     }
   }
@@ -45,7 +45,9 @@ function ConcertItem(props) {
       </div>
       <div>
         <button>More Info</button>
-        <button>Add to Favorites</button>
+        <button onClick={toggleFavoriteStatusHandler}>
+          {itemIsFavorite ? "Remove from Favorites" : "Add to Favorites"}
+        </button>
       </div>
     </li>
   );
