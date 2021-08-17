@@ -1,4 +1,32 @@
+import { useContext } from "react";
+import FavoritesContext from "../../store/favorites-context";
+
 function ConcertItem(props) {
+  const favoritesCtx = useContext(FavoritesContext);
+
+  const itemIsFavorite = favoritesCtx.itemIsFavorite(props.concert.id);
+
+  function toggleFavoriteStatusHandler() {
+    if (itemIsFavorite) {
+      favoritesCtx.removeFavorite(props.concert.id);
+    } else {
+      favoritesCtx.addFavorite({
+        id: props.concert.id,
+        id: props.concert.id,
+        id: props.concert.id,
+        id: props.concert.id,
+        id: props.concert.id,
+        id: props.concert.id,
+        id: props.concert.id,
+        id: props.concert.id,
+        id: props.concert.id,
+        id: props.concert.id,
+        id: props.concert.id,
+        id: props.concert.id,
+      });
+    }
+  }
+
   return (
     <li>
       <div>
